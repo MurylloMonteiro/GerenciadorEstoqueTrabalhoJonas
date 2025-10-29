@@ -1,0 +1,41 @@
+#container{
+    
+    display: flex;
+
+    
+    justify-content: space-between;
+    
+
+    border-radius: 10px;
+
+    background-color: aliceblue;
+}
+#itens{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    
+
+    margin-left: 80px;
+    
+
+}
+#Unidade{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    
+}
+#ValorTotal{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-right: 80px;
+   
+}

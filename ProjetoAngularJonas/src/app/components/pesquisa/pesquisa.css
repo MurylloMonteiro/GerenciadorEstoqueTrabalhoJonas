@@ -1,0 +1,61 @@
+#container{
+    display: flex;
+    flex-direction: column;
+
+    
+
+    align-items: center;
+
+    margin-bottom: 20px;
+    
+
+  
+
+}
+#Titulo{
+    text-align: center;
+
+}
+#Serch{
+
+   
+
+    text-align: center;
+    width: 100%;
+    
+
+}
+#Serch > button{
+    margin-left: 20px;
+
+    width: 17%;
+    height: 45px;
+
+    border-radius: 4px;
+
+
+    color: aliceblue;
+
+    background-color: rgb(71, 71, 71);
+
+}
+
+#Serch > input{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>') no-repeat 10px center;
+    
+    border: 1px solid rgb(190, 190, 190);
+
+    border-radius: 4px;
+    background-color: white;
+
+
+    height: 40px;
+    width: 80%;
+}
+button{
+    border: none;
+}
+button:hover{
+    transition: 0.3s ease;
+    transform: scale(1.02);
+}
