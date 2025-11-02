@@ -2,10 +2,10 @@ import { Component, DoCheck} from '@angular/core';
 
 
 export let ProdutoGlobal: any[] = [
-  {Titulo: "notbook dell", Qtd: 20, Preco: 3800.00},
+  {Titulo: "notbook dell", Qtd: 12, Preco: 3800.00},
   {Titulo: "notbook cce", Qtd: 34, Preco: 3600.00},
-  {Titulo: "notbook samsung", Qtd: 17, Preco: 5400.00},
-  {Titulo: "notbook apple", Qtd: 334, Preco: 4500.00}
+  {Titulo: "notbook samsung", Qtd: 7, Preco: 5400.00},
+  {Titulo: "notbook apple", Qtd: 11, Preco: 4500.00}
 ];
 
 export let ValorTotal = 0;
@@ -52,7 +52,7 @@ export class Itens implements DoCheck{
   CalcularValorTotal(){
     ValorTotal = 0
     for(let i = 0; i < ProdutoGlobal.length; i ++){
-      ValorTotal = ValorTotal + ProdutoGlobal[i].Preco
+      ValorTotal = ValorTotal + (ProdutoGlobal[i].Qtd * ProdutoGlobal[i].Preco)
     }
     QtdProdutos = ProdutoGlobal.length;
     }
