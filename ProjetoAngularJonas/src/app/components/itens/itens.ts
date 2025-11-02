@@ -1,8 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck} from '@angular/core';
+
+
+export let ProdutoGlobal: any[] = [
+  {Titulo: "notbook dell", Qtd: 20, Preco: 3800.00},
+  {Titulo: "notbook cce", Qtd: 34, Preco: 3600.00},
+  {Titulo: "notbook samsung", Qtd: 17, Preco: 5400.00},
+  {Titulo: "notbook apple", Qtd: 334, Preco: 4500.00}
+];
 
 export let ValorTotal = 0;
 export let Qtd = 0;
 export let QtdProdutos = 0;
+
+
 
 @Component({
   selector: 'app-itens',
@@ -13,48 +23,49 @@ export let QtdProdutos = 0;
 
 
 
-export class Itens implements OnInit{
+export class Itens implements DoCheck{
+
+
+  // Pega a variavel global para o html poder pegar as infos
+  Produtos: any = ProdutoGlobal
+
+  ngDoCheck(){
+    this.CalcularQtd()
+    this.CalcularValorTotal()
+  }
 
   
-
-
-
-  Produto: any = [
-    {Titulo: "notbook dell", Qtd: 20, Preco: 3800.00},
-    {Titulo: "notbook cce", Qtd: 34, Preco: 3600.00},
-    {Titulo: "notbook samsung", Qtd: 17, Preco: 5400.00},
-    {Titulo: "notbook apple", Qtd: 334, Preco: 4500.00},
+  AdicionarProduto(NovoProd = {}){
+    this.Produtos.unshift(NovoProd)
     
-  ]
-  
-  
-  
+    console.log(ProdutoGlobal)
+  }
+
+
+  ApagarProd(Index: number){
+    ProdutoGlobal.splice(Index,1);
+    console.log(Index)
+
+  }
   
  
   CalcularValorTotal(){
-    for(let i = 0; i < this.Produto.length; i ++){
-      ValorTotal = ValorTotal + this.Produto[i].Preco
-      
+    ValorTotal = 0
+    for(let i = 0; i < ProdutoGlobal.length; i ++){
+      ValorTotal = ValorTotal + ProdutoGlobal[i].Preco
     }
-    console.log("O Valor e " + ValorTotal)
-    QtdProdutos = this.Produto.length;
-    console.log("QtdProd "  + QtdProdutos)
+    QtdProdutos = ProdutoGlobal.length;
     }
+
 
     CalcularQtd(){
-    for(let i = 0; i < this.Produto.length; i ++){
-      Qtd = Qtd + this.Produto[i].Qtd
-      
+      Qtd = 0
+    for(let i = 0; i < ProdutoGlobal.length; i ++){
+      Qtd = Qtd + ProdutoGlobal[i].Qtd
     }
-    console.log("Quantidade e " + Qtd)
     }
 
-  ngOnInit(){
-    this.CalcularQtd()
-   this.CalcularValorTotal()
-    
-      
-  }
+  
   
 
 }

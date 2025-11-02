@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, ViewChild} from '@angular/core';
+import { EstadoGlobal } from '../tela-adicionar/tela-adicionar';
+
+
+
 
 @Component({
   selector: 'app-pesquisa',
@@ -6,6 +10,21 @@ import { Component } from '@angular/core';
   templateUrl: './pesquisa.html',
   styleUrl: './pesquisa.css',
 })
-export class Pesquisa {
+export class Pesquisa  {
+  
+  
+
+  
+
+  abrir(){
+    EstadoGlobal.ativo = true
+    console.log("foi " + EstadoGlobal.ativo)
+  }
+ 
+
+
+
+ 
+
 
 }

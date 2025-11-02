@@ -1,0 +1,49 @@
+@if (Abrir) {
+    
+    <div id="Overlay">
+    <div id="Tela">
+
+        <div id="categoria">
+            <h1>Adicionar Item</h1>
+
+            <p>Nome Do Item</p>
+            <input #Nome id="Nome" type="text">
+
+            <p>Categoria</p>
+            <input type="text">
+        </div>
+
+        <div id="itens">
+            <div id="SubItens">
+                <p>Quantidade</p>
+                <input #Qtd type="text">
+            </div>
+
+
+            <div id="SubItens">
+                <p>Preço (R$)</p>
+                <input #Preco type="text">
+
+            </div>
+
+
+
+
+        </div>
+
+        <div id="buttons">
+            <button (click)="Fechar()" >Cancelar</button>
+            <button (click)="AdicionarInfo(Nome.value, Qtd.value, Preco.value)" >Adicionar Item</button>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+}

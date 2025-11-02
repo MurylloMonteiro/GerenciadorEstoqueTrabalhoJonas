@@ -1,6 +1,6 @@
 
 
-@for (item of Produto; track  $index) {
+@for (item of Produtos; track  $index) {
    <div id="iten">
 
 
@@ -14,12 +14,12 @@
             </svg>
         </div>
 
-        <h2>{{Produto[$index].Titulo}}</h2>
+        <h2>{{Produtos[$index].Titulo}}</h2>
         
 
         <div id="TrashPen">
 
-            <button class="butao">
+            <button  class="butao">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pen"
                 viewBox="0 0 16 16">
                 <path
@@ -29,7 +29,7 @@
 
 
 
-            <button class="butao">
+            <button  (click)="ApagarProd($index)" class="butao">
             <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash"
                 viewBox="0 0 16 16">
                 <path
@@ -47,11 +47,11 @@
         <p>Quantidade:</p>
 
         <button>+</button>
-        <p>{{Produto[$index].Qtd}}</p>
+        <p>{{Produtos[$index].Qtd}}</p>
         <button>-</button>
 
         <p>Preço:</p>
-        <p style="margin-left: -4px;">R$ {{Produto[$index].Preco}}</p>
+        <p style="margin-left: -4px;">R$ {{Produtos[$index].Preco}}</p>
     </div>
 
 
