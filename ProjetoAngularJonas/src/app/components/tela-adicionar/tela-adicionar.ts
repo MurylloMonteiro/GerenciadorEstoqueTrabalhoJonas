@@ -1,6 +1,8 @@
 import {  Component, DoCheck} from '@angular/core';
 import { ProdutoGlobal} from '../itens/itens';
 
+
+//Estado global para acionar a tela de adicionar Prduto
 export const EstadoGlobal = {
   ativo: false
 }

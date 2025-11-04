@@ -19,7 +19,7 @@
 
         <div id="TrashPen">
 
-            <button  class="butao">
+            <button (click)="AbrirTelaMod($index)" class="butao">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pen"
                 viewBox="0 0 16 16">
                 <path
@@ -46,9 +46,9 @@
     <div id="quantidade">
         <p>Quantidade:</p>
 
-        <button>+</button>
-        <p>{{Produtos[$index].Qtd}}</p>
-        <button>-</button>
+        
+        <p>{{Produtos[$index].Qtd}}  | </p>
+        
 
         <p>Preço:</p>
         <p style="margin-left: -4px;">R$ {{Produtos[$index].Preco}}</p>

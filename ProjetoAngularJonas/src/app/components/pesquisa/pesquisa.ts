@@ -15,10 +15,9 @@ export class Pesquisa  {
   
 
   
-
+  //Serve para abrir a tela adicionar Produto
   abrir(){
     EstadoGlobal.ativo = true
-    console.log("foi " + EstadoGlobal.ativo)
   }
  
 

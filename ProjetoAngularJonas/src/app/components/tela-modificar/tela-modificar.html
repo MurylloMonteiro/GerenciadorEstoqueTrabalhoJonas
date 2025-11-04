@@ -1,0 +1,49 @@
+@if (Abrir) {
+    
+    <div id="Overlay">
+    <div id="Tela">
+
+        <div id="categoria">
+            <h1>Modificar Item</h1>
+
+            <p>Nome Do Item</p>
+            <input value="{{NomeMod}}" #Nome id="Nome" type="text">
+
+            <p>Categoria</p>
+            <input type="text">
+        </div>
+
+        <div id="itens">
+            <div id="SubItens">
+                <p> Quantidade</p>
+                <input value="{{QtdMod}}" #Qtd type="text">
+            </div>
+
+
+            <div id="SubItens">
+                <p>Preço (R$)</p>
+                <input value="{{PrecoMod}}" #Preco type="text">
+
+            </div>
+
+
+
+
+        </div>
+
+        <div id="buttons">
+            <button (click)="Fechar()" >Cancelar</button>
+            <button  (click)="ModificarItem(Nome.value, Qtd.value, Preco.value)" >Modificar Item</button>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+}
