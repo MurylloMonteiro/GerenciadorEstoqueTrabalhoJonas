@@ -6,7 +6,9 @@ export let ProdutoGlobal: any[] = [
   { Titulo: "notbook CCE", Qtd: 34, Preco: 3600.00 },
   { Titulo: "notbook Samsung", Qtd: 7, Preco: 5400.00 },
   { Titulo: "notbook Apple", Qtd: 11, Preco: 4500.00 }
+  
 ];
+
 
 //Exporto para Valore-Qtd Component
 export let ValorTotal = 0;
